@@ -27,7 +27,7 @@ export const getUserFriends = async(req , res)=>{
         );
         res.status(200).json(formattedFriends);
     } catch (err) {
-        return res.status(404).json({error : err.message});
+        res.status(404).json({error : err.message});
     } 
 }
 
@@ -58,7 +58,7 @@ export const addRemoveFriend = async(req , res) =>{
         );
         res.status(200).json(formattedFriends);
     } catch (error) {
-        
+        res.status(404).json({error : err.message});
     }
 }
 
